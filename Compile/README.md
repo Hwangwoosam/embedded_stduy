@@ -10,14 +10,20 @@
    여러개의 파일이 하나의 헤더파일을 접근할 경우 #ifndef,#endif를 통해서 문제를 해결 할 수 있다.   
    옵션 -E를 통해서 Preprocess를 할 수 있다.(*.c --> *.i)   
    옵션 -I를 통해서 컴파일 중 include path를 설정할 수 있으며 -J옵션을 통해 Compiler Default include path를 설정할 수 있다.     
-    
+  
  2. 컴파일러(Compiler)
  - - -
    Layer1   
    High level language를 low level language로 변환한다.   
    옵션 -S 를 사용하여 *.s파일 형식으로 어셈블리(low level language)로 생성할 수 있다.   
+
  3. 어셈블러(Assembler)
+ - - -
+   .   
  4. 링커(linker)
+ - - -
+   .   
+   
  5. ect
  - - -
    Layer1   
