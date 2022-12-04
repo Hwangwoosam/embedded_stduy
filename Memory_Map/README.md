@@ -1,6 +1,7 @@
 #Memory MAP
 ====================
 - - -   
+<img src="./flow.jpg" width="450px" height="350px">
 1. Symbol      
  Layer1   
  Symbol이란 Linker가 알아볼 수 있는 기본 단위이며, Link를 한 후에는 자신만의 주소를 갖게되는 특별한 단위이다.   
@@ -11,4 +12,7 @@
 2. RO,RW,ZI   
 Layer1   
 RW는 Read-write 로서, 초기값이 있는 전역변수를 의미하고,ZI는 zero-initialized로서, 초기값이 0인 전역변수를 의미하고, 마지막으로 RO는 Read-only로서 수정이 불가능한 const 전역변수와 text인 code를 의미합니다. 단 전역변수중 const로 선언된 data들도 포함이 된다.   
+RW = .data(초기값이 있는 전역변수)   
+ZI = .bss(initial 되지 않은 전역변수 + initail값이 0인 전역변수 + stack + heap)   
+RO = .constdata + .text(const로 선언된 전역변수, 함수등의 code, ex) main())   
 - - -
