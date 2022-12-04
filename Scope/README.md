@@ -1,4 +1,4 @@
-#변수의 Scope
+#Scope
 ==============
 1. auto
 - - -
@@ -24,4 +24,7 @@
 - - -
     Layer1
     volatile을 변수 앞에 선언하여 사용한다면 compiler가 컴파일하는 과정에서 optimization을 하지 않는다.   
-    Device Driver를 설계할 때 많이 사용하는데 Memory mapped I/O의 경우에 가은 주소에 다른 값들을 연속해서 쓰게되기 때문이다.
+    Device Driver를 설계할 때 많이 사용하는데 Memory mapped I/O의 경우에 가은 주소에 다른 값들을 연속해서 쓰게되기 때문이다.   
+
+#Varaible
+================
