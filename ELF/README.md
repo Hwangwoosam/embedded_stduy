@@ -26,8 +26,20 @@ Layer1
 .strtab: .symtab와 .debug section에 사용되는 const data인 string, section header의 section 이름들도 존재한다.   
 - - -
 
-<img src="./relocate.jpg" width="450px" height="350px">
+<img src="./object.jpg" width="450px" height="350px">
 
 3. Executable Object File   
 Layer1   
+Segment는 Section들의 집합이며 같은 속성의 section들을 모아서 한 segment안에 넣으며 크게 Code segment와 Data segment로 나누어 진다.   
+ELF header에는 file이 실행될 때, 시작되어야 하는 entry point address가 있고, rel.* section들은 다 없어진다.   
+.init section의 용도는 OS가 있는 시스템에서 ELF가 실행될 때 실행되기 전에 initialization을 하는 작은 Code가 들어있고, 또 Program header가 들어가 있다.program header를 통해서 실행하는데 필요한 정보들을 넣어 준다.   
+
 - - -
+4. etc   
+Layer1   
+같은 이름의 Global symbol priority는 weak와 strong으로 나누어진다.함수와 초기화가 된 전역변수는 Strong을 분류하고, 초기화가 되지 않은 전역변수는 Weak라고 분류를 한다.   
+* 여러 개의 Strong symbol이 있을 경우에는 Link error 발생   
+* 하나의 Strong Symbol과 여러 개의 Weak Symbol이 있다면, Strong Symbol 선택   
+* 여러 개의 Weak Symbol이 있다면, Random하게 골라 선택   
+
+Embedded system에서는 Code segment중 text,rodata를 RO라고 칭하고, data를 RW라는 두 개 section으로 나눈 binary가 실행될 수 있다.   
