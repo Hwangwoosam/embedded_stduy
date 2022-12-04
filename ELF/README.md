@@ -9,7 +9,9 @@ Layer1
 * 모든 iput object file들의 모든 코드와 데이터를 가지는 실행 가능한 새로운 object file을 만들어 내는데 이때 각각의 object file들이 가지는 text, bss, data를 모두 새로운 text, bss, data에 모은다.   
 * Linker Placement Rule로 같은 종류의 Input section들을 모아 알파벳순으로 정리하여 Output section으로 묶고 그러한 Output section들을 모아 알파벳순으로 정리하여 Region을 이루게 한다.   
 - - -
+
 <img src="./relocate.jpg" width="450px" height="350px">
+
 2. ELF relocatable object file   
 Layer1   
 .rel.text: text에 들어있는 각 머신 코드의 위치를 나타내며, Linker가 이 오브젝트 파일을 다른 오브젝트 파일들과 연결할 때 사용한다.   
@@ -23,7 +25,9 @@ Layer1
 .line: -g option으로 compile할 경우, text section의 opcode와 원본 C의 line을 연결하여, code를 보면서 debugging을 가능하게 한다.   
 .strtab: .symtab와 .debug section에 사용되는 const data인 string, section header의 section 이름들도 존재한다.   
 - - -
+
 <img src="./relocate.jpg" width="450px" height="350px">
+
 3. Executable Object File   
 Layer1   
 - - -
