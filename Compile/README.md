@@ -36,9 +36,9 @@
   * Layer1   
   Linker란 link시에 실제 함수 정의부의 위치와 전역변수들의 위치를 library file과 object file에서 차례대로 조사한 후에 Table로 저장하여, 그 주소를 함수호출 코드 부분에 기록해 넣는다.   
 
-  - Linker Placement Rule를 통해서 Section끼리 모으는데 input section은 각 object file의 symbol들이 알파벳 순서대로 정리되어있고 이런 input section들이 output section을 이루고 output section이 region을 이루게 된다.   
+  Linker Placement Rule를 통해서 Section끼리 모으는데 input section은 각 object file의 symbol들이 알파벳 순서대로 정리되어있고 이런 input section들이 output section을 이루고 output section이 region을 이루게 된다.   
  
-  - Scatter loading file(scl)란 원하는 영역에 symbol들을 특성에 따라 위치 시킬수 있는 Linker Script이다.   
+  Scatter loading file(scl)란 원하는 영역에 symbol들을 특성에 따라 위치 시킬수 있는 Linker Script이다.   
 
   * Layer2   
   다양한 object를 연결하여서 ELF 파일을 생성한다.   
