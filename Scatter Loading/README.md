@@ -15,7 +15,8 @@ Layer1
 
 2. Scatter Loading Examples   
 Layer1  
-''' 
+<pre>
+<code>
 LOAD ROM 0x0{   
     EXEC_ROM 0x0   
     {   
@@ -28,5 +29,6 @@ LOAD ROM 0x0{
         *.o(+ZI)   
     }   
 }   
-'''
+</pre>
+</code>
 - - -
