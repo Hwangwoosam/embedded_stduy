@@ -14,17 +14,19 @@ Layer1
 - - -
 
 2. Scatter Loading Examples   
-Layer1   
-LOAD ROM 0x0{
-    EXEC_ROM 0x0
-    {
-        *.o(+RO)
-    }
-    EXEC_RAM1 0x8000{
-        *.o(+RW)
-    }
-    EXEC_RAM2 0xA000{
-        *.o(+ZI)
-    }
-}
+Layer1  
+''' 
+LOAD ROM 0x0{   
+    EXEC_ROM 0x0   
+    {   
+        *.o(+RO)   
+    }   
+    EXEC_RAM1 0x8000{   
+        *.o(+RW)   
+    }   
+    EXEC_RAM2 0xA000{   
+        *.o(+ZI)   
+    }   
+}   
+'''
 - - -
